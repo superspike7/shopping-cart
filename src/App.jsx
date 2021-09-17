@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Home from './Home'
+import Shop from './Shop'
 
 function App() {
-
   return (
-    <div className="">
-      <h1 className="text-xl font-bold text-center">hello world</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/Shop" component={Shop}/>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
