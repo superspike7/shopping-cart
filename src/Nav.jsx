@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Nav() {
   return (
-    <ul className="flex justify-center gap-5">
+    <ul className="flex justify-center gap-5 text-gray-900">
       <li>
         <Link to="/" className="underline hover:text-blue-500 font-light text-2xl">Home</Link>
       </li>
