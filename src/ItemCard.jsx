@@ -10,7 +10,7 @@ export default function ItemCard(props) {
       <h1>{name}</h1>
       <p>{price}</p>
       <button onClick={() => handleClick(id)} className="bg-blue-500 text-white font-bold px-2 rounded-md">
-        Add to Cart
+        more info 
       </button>
     </div>
   );

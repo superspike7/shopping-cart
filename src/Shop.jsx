@@ -1,21 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { items } from "./data";
-import ItemCard from "./ItemCard";
+import Items from "./Items";
 
 export default function Shop() {
   const [cart, setCart] = useState([]);
-
-  function handleAddCart(id) {
-    setCart([...cart, getItemById(id) ])
-  }
-
-  useEffect(()=>{
-    console.log(cart)
-  },[cart])
-
-  function getItemById(id) {
-    return items.find((item) => id === item.id);
-  }
 
   return (
     <div className="">
@@ -25,17 +12,7 @@ export default function Shop() {
           Checkout
         </button>
       </nav>
-      <div className="w-1/2 mx-auto grid grid-cols-4 gap-5 mt-10">
-        {items.map((item) => (
-          <ItemCard
-            name={item.name}
-            price={item.price}
-            key={item.id}
-            id={item.id}
-            handleClick={handleAddCart}
-          />
-        ))}
-      </div>
+      <Items/>
     </div>
   );
 }
