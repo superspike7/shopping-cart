@@ -5,7 +5,12 @@ import Items from "./Items";
 
 export default function Shop() {
   const [cart, setCart] = useState([]);
-  let { path } = useRouteMatch()
+  let { path } = useRouteMatch();
+
+  function handleAddToCart(e, items) {
+    e.preventDefault();
+    console.log(items);
+  }
 
   return (
     <div className="">
@@ -17,10 +22,10 @@ export default function Shop() {
       </nav>
       <Switch>
         <Route exact path={path}>
-          <Items/>
+          <Items />
         </Route>
         <Route path={`${path}/:itemId`}>
-          <Item />
+          <Item handleAddToCart={handleAddToCart} />
         </Route>
       </Switch>
     </div>
