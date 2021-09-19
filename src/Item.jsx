@@ -5,7 +5,7 @@ import { items } from "./data";
 export default function Item({ handleAddToCart }) {
   const [item, setItem] = useState({});
   const [cartItems, setCartItems] = useState([]);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
 
   let { itemId } = useParams();
 
@@ -16,7 +16,7 @@ export default function Item({ handleAddToCart }) {
 
   useEffect(()=>{
     setCartItems(new Array(amount).fill(item))
-  },[amount])
+  },[amount, item])
 
   function handleChange(e) {
     setAmount(Number(e.target.value))
