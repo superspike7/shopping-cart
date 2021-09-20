@@ -31,7 +31,7 @@ export default function Cart({ cartItems }) {
       {cart.map((item, index) => (
         <CartItems
           name={item.name}
-          totalPrice={item.totalPrice.toFixed(2)}
+          totalPrice={item.totalPrice}
           quantity={item.quantity}
           key={index}
           id={item.id}

@@ -16,9 +16,8 @@ export default function Shop() {
   return (
     <div className="">
       <nav className="text-center flex justify-center gap-5 mt-1 bg-blue-100">
-        <h3>Items: {cart.length}</h3>
-        <Link to={`${url}/cart`} className="bg-green-500 rounded-md text-white px-1">
-          Checkout
+        <Link to={`${url}/cart`} className="text-blue-500 underline font-bold px-1 hover:text-black">
+          <h3>Cart: {cart.length}</h3>
         </Link>
       </nav>
       <Switch>
