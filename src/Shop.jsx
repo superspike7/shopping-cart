@@ -13,10 +13,6 @@ export default function Shop() {
     setCart([...cart].concat(items))
   }
 
-  useEffect(()=>{
-    console.log(cart)
-  },[cart])
-
   return (
     <div className="">
       <nav className="text-center flex justify-center gap-5 mt-1 bg-blue-100">
