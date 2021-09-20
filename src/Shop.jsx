@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Switch, useRouteMatch, Route, Link } from "react-router-dom";
+import { Switch, useRouteMatch, Route, Link, useHistory } from "react-router-dom";
 import Item from "./Item";
 import Items from "./Items";
 import Cart from "./Cart";
 
 export default function Shop() {
   const [cart, setCart] = useState([]);
+  let history = useHistory()
   let { path, url } = useRouteMatch();
 
   function handleAddToCart(e, items) {
     e.preventDefault();
     setCart([...cart].concat(items))
+    history.push("/shop")
   }
 
   return (

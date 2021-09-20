@@ -43,7 +43,7 @@ export default function Item({ handleAddToCart }) {
             value={amount}
             onChange={handleChange}
             className="w-1/4 text-2xl bg-gray-100 p-1 rounded-md text-center "
-            min="0"
+            min="1"
           />
           <button className="text-xl bg-blue-500 rounded-md text-white font-bold px-2">
             Add to Cart

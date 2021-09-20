@@ -31,13 +31,16 @@ export default function Cart({ cartItems }) {
       {cart.map((item, index) => (
         <CartItems
           name={item.name}
-          totalPrice={item.totalPrice}
+          totalPrice={parseFloat(item.totalPrice).toFixed(2)}
           quantity={item.quantity}
           key={index}
           id={item.id}
         />
       ))}
-      <h1 className="text-center text-2xl font-bold">total: {total().toFixed(2)}</h1>
+      <div className="flex justify-end gap-4">
+        <h1 className="text-center text-2xl font-bold">total: {total().toFixed(2)}</h1>
+        <button className="bg-green-500 text-white px-2 rounded-md">Checkout</button>
+      </div>
     </div>
   );
 }
